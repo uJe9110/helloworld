@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class="main">
+        <div class="first">
+
+        </div>
+        <div class="second">
+            <div class="subTitOne">
+                <p>Gallery of <br> Saito asuka</p> 
+            </div>
+            <div class="mainTitle">
+                <div class="one">
+                    飛
+                </div>
+                <div class="two">
+                    鳥
+                </div>
+                <div class="three">
+                    斎
+                </div>
+                <div class="four">
+                    藤
+                 </div>
+            </div>
+            <div class="subTitOne">
+            <p>© 2022</p> 
+            </div>
+         </div>
+    </div>
+
+    <div class="secondMain">
+        <div class="first_secondMain">
+            <div class="secondMain_atr1">
+
+            </div>
+            <div class="first_secondMain_content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent est sem, sollicitudin sit amet ante non, volutpat pretium sapien. Fusce aliquet efficitur dolor, at varius dui gravida vel. Suspendisse in condimentum leo. Donec feugiat libero porta eros blandit lobortis ac interdum velit. Quisque tempor ut mi sit amet sagittis. Morbi nec facilisis lacus. Etiam neque eros, aliquam vel felis vitae, consectetur maximus quam. Praesent eu commodo libero. Nulla accumsan lectus ac suscipit porttitor. Quisque luctus lacus in venenatis auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at orci aliquet, scelerisque arcu id, ultricies metus. Vestibulum nisi velit, laoreet et neque vel, posuere efficitur lectus. Sed id justo aliquet nulla imperdiet blandit ut at erat. Vivamus egestas, enim at convallis viverra, quam erat pulvinar nulla, et dictum magna erat ac nunc. Donec tempor euismod venenatis.
+
+                    Aliquam consequat tincidunt facilisis. Sed ultrices eget dolor quis luctus. Aenean eget dictum dolor. Morbi enim tellus, viverra sed augue quis, elementum condimentum libero. Maecenas vitae nisl id metus ornare imperdiet quis eget eros. Curabitur gravida dapibus tristique. Sed quis tincidunt ipsum, vitae commodo libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed euismod arcu ac erat tristique, sit amet laoreet quam sagittis. Aliquam ut semper elit. Duis erat orci, tempor sed orci vitae, iaculis rhoncus nulla. Mauris molestie at urna ut commodo. Fusce pellentesque viverra orci ut lacinia. Nunc arcu eros, luctus a eros at, bibendum vulputate metus. Aenean tellus enim, consectetur nec tincidunt vel, mollis at quam.
+
+                </p>
+            </div>
+            <div class="secondMain_atr2">
+                
+            </div>
+        </div>
+        <div class="second_secondMain">
+            <div class="gallery">
+                
+            </div>
+            <div class="galleryBack">
+                <div class="galleryBack1"></div>
+                <div class="galleryBack2"></div>
+                <div class="galleryBack3"></div>
+                <div class="galleryBack4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="thirdMain">
+            <div class="firstGrid">
+                <div class="backgroundFirstGrid"></div>
+            </div>
+            <div class="secondGrid"></div>
+            <div class="thirdGrid"></div>
+            <div class="fourthGrid"></div>
+            <div class="fifthGrid"></div>
+    </div>
+
+    <div class="fourthMain">
+        
+            <img data-index="0" data-status='inactive' src="img/01.jpg" alt="" class="image">
+            <img data-index="1" data-status='inactive' src="img/02.jpg" alt="" class="image">
+            <img data-index="2" data-status='inactive' src="img/03.jpg" alt="" class="image">
+            <img data-index="3" data-status='inactive' src="img/04.jpg" alt="" class="image">
+            <img data-index="4" data-status='inactive' src="img/05.jpg" alt="" class="image">
+            <img data-index="5" data-status='inactive' src="img/06.jpg" alt="" class="image">
+            <img data-index="6" data-status='inactive' src="img/07.jpg" alt="" class="image">
+            <img data-index="7" data-status='inactive' src="img/08.jpg" alt="" class="image">
+            <img data-index="8" data-status='inactive' src="img/09.jpg" alt="" class="image">
+            <img data-index="9" data-status='inactive' src="img/11.jpg" alt="" class="image">
+            
+    </div>
+
+    
+
+    <script>
+        const first = document.querySelector('.first');
+        const second = document.querySelector('.second');
+        second.addEventListener('mouseover', (event) => {
+            first.style.backgroundImage = 'url(/img/Saito_Asuka.jpg)';
+        })
+        second.addEventListener('mouseout', (event) => {
+            first.style.backgroundImage = 'url(/img/10.jpg)';
+        })
+
+    </script>
+
+    <script src="https://unpkg.com/animate-css-grid@latest"></script>
+    
+    <script>
+        const firstGrid = document.querySelector('.firstGrid');
+        const grid = document.querySelector(".thirdMain");
+        const secondMain = document.querySelector('.second_secondMain');
+        const gallery = document.querySelector('.gallery')
+        const gridAnimation = {
+        duration: 100,
+        easing: "linear",
+        };
+      
+        animateCSSGrid.wrapGrid(grid, gridAnimation);
+        
+        firstGrid.addEventListener('mouseover', (event) => {
+        firstGrid.classList.toggle('gridRow');    
+        })
+
+        firstGrid.addEventListener('mouseout', (event) => {
+        firstGrid.classList.remove('gridRow');    
+        })
+        
+        secondMain.addEventListener('mouseover', (event)=>{
+            
+            secondMain.classList.toggle('galleryAnimation')
+        })
+        secondMain.addEventListener('mouseout', (event)=>{
+            
+            secondMain.classList.remove('galleryAnimation')
+        })
+
+    </script>
+
+<script>
+    const images = document.getElementsByClassName('image');
+
+    let globalIndex = 0;
+    let last = {x:0, y:0};
+
+    const activate = (image, x, y) =>
+    {
+        image.style.left = `${x}px`;
+        image.style.top = `${y}px`;
+
+        image.dataset.status = 'active';
+
+        last = { x, y};
+    }
+
+    const distance = (x,y) =>
+    {
+        return Math.hypot(x - last.x, y - last.y);
+    }
+
+    window.onmousemove = e =>
+    {
+        if(distance(e.clientX, e.clientY) >200)
+        {
+            const lead = images[globalIndex % images.length];
+            const tail = images[(globalIndex - 2) % images.length]
+
+            activate(lead, e.clientX, e.clientY);
+
+            if(tail) tail.dataset.status = 'inactive';
+            
+            globalIndex++;
+        }
+    }
+</script>
+
+</body>
+</html>
